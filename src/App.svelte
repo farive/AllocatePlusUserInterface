@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Calendar from "./Components/Calendar.svelte";
-import Login from "./Components/Login.svelte"
+	import Login from "./Components/Login.svelte"
 
 	let loginInfo = {
 		username: "",
