@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Login from "./Components/Login.svelte"
+	import Calendar from "./Components/Calendar.svelte";
+import Login from "./Components/Login.svelte"
 
 	let loginInfo = {
 		username: "",
@@ -15,14 +16,15 @@
 </script>
 
 <main>
-	<div class = "Login">
-		<Login on:handleLoginInfo={handleLoginInfo}/>
-	</div>
+	<Login on:handleLoginInfo={handleLoginInfo}/>
+	<Calendar/>
 </main>
 
 <style>
-	.Login{
+	main{
 		display: flex;
-		justify-content: left;
+		flex-direction: row;
+		gap: 12px;
+		margin: 5px;
 	}
 </style>
