@@ -7,6 +7,7 @@
     let password;
     let authenticate;
 
+    // Handle when user clicks submit
     const handleSubmit = () => {
         const loginInfo = {
             username: username,
@@ -17,6 +18,7 @@
     }
 </script>
 
+<!-- Handles login input from user -->
 <form on:submit|preventDefault={handleSubmit}>
     <h1>Login</h1>
     <div class = "group">
@@ -24,11 +26,11 @@
     </div>
 
     <div class = "group">
-        <input type = "text" placeholder="Password" bind:value={password}>
+        <input type = "password" placeholder="Password" bind:value={password}>
     </div>
 
     <div class = "group">
-        <input type = "text" placeholder = "Authenticate Key" bind:value={authenticate}>
+        <input type = "number" placeholder = "Authenticate Key" bind:value={authenticate}>
     </div>
     <button>Login</button>
 </form>
@@ -38,14 +40,39 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 1px black solid;
-        padding: 10px;
+        padding: 20px;
         width: fit-content;
+        background: #d8fcfd;
+        box-shadow: 0.3px 0.3px 15px #C5E5E6, -0.3px -0.3px 15px #EBFFFF;
     }
 
     input {
         border: 0px none;
+        outline: none;
         margin: 10px;
+        padding: 10px;
         width: fit-content;
+        background: #d8fcfd;
+        box-shadow: 0.3px 0.3px 15px #C5E5E6, -0.3px -0.3px 15px #EBFFFF;
+    }
+
+    button {
+        margin: 10px;
+        padding: 10px;
+        font-weight: bold;
+        width: 40%;
+        border: 0px none;
+        background: #d8fcfd;
+        box-shadow: 0.3px 0.3px 15px #C5E5E6, -0.3px -0.3px 15px #EBFFFF;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
     }
 </style>
